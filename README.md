@@ -12,7 +12,7 @@ Avaliação técnica.
 - ### Fluxo
 
 <p align="center" width="100%">
-  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true"/>
+  <img src="https://github.com/pinhosilva/solucao-lancamentos/blob/main/Fluxo.PNG"/>
 </p>
 
 ## Executando o Projeto
