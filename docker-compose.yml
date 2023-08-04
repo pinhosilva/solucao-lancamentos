@@ -3,6 +3,8 @@ version: '3.4'
 services:
   web.api:
     image: ${DOCKER_REGISTRY-}solucao-lancamentos
+    ports:
+          - "59050:80"
     build:
       context: .
       dockerfile: src/Web.Api/Dockerfile

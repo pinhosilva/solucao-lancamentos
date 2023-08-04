@@ -18,13 +18,13 @@ Avaliação técnica.
 ## Executando o Projeto
 
 - Para executar o projeto, você precisará ter o [docker](https://app.dbdesigner.net/signup "docker") instalado. Um software de contêiner que fornece uma camada de abstração e automação para virtualização de sistemas operacionais windowns e linux. Nosso caso estamos utilizando o linux.
-- Certifique-se também que a porta `1433` esteja liberada.
+- Certifique-se também que as portas `1433` e `59050` estejam liberadas.
 
 #### Abra o terminal, entre na raiz do projeto e execute o comando:
 
 `docker-compose up --build`
 
-após a finalização do build, abrirá o Swagger com a documentação dos endpoints.
+após a finalização do build, poderá ser acessado clicando [aqui](http://localhost:59050/swagger/index.html "aqui").
 
 ## Tecnologias usadas no projeto
 
