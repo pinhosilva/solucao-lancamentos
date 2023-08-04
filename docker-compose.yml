@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  web.api:
+    image: ${DOCKER_REGISTRY-}solucao-lancamentos
+    build:
+      context: .
+      dockerfile: src/Web.Api/Dockerfile
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "Jp9#zS$4rT"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - 1433:1433
+
+  mssqltools:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      - sqlserver
+    volumes:
+     - ./scripts/create-database.sql:/scripts/create-database.sql
+     - ./scripts/entrypoint-sql-server.sh:/scripts/entrypoint-sql-server.sh
+    command: /bin/bash /scripts/entrypoint-sql-server.sh
